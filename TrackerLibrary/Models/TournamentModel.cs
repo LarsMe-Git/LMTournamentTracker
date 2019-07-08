@@ -9,7 +9,7 @@ namespace TrackerLibrary.Models
     public class TournamentModel
     {
         /// <summary>
-        /// represent the name of the tournament123
+        /// represent the name of the tournament1234
         /// </summary>
         public string TournamentName { get; set; }
         /// <summary>
