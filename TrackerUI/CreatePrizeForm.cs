@@ -26,17 +26,17 @@ namespace TrackerUi
             {
                 PrizeModel model = new PrizeModel(
                     placeNameValue.Text,
-                    placeNameValue.Text,
+                    placeNumberValue.Text,
                     prizeAmountValue.Text,
-                    prizeAmountValue.Text);
+                    prizePercentageValue.Text);
 
                 
                 GlobalConfig.Connection.CreatePrize(model);
                
                 placeNameValue.Text = " ";
-                placeNameValue.Text = " ";
+                placeNumberValue.Text = " ";
                 prizeAmountValue.Text = "0";
-                prizeAmountValue.Text = "0";
+                prizePercentageValue.Text = "0";
             }
             else
             {
@@ -68,7 +68,7 @@ namespace TrackerUi
             double prizePercentage = 0;
 
             bool prizeAmountValid = decimal.TryParse(prizeAmountValue.Text, out prizeAmount);
-            bool prizePercentageValid = double.TryParse(prizepercentageValue.Text, out prizePercentage);
+            bool prizePercentageValid = double.TryParse(prizePercentageValue.Text, out prizePercentage);
 
             if (prizeAmountValid == false ||prizePercentageValid == false)
             {

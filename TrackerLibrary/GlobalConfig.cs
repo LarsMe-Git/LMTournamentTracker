@@ -27,7 +27,7 @@ namespace TrackerLibrary
 
                 //TODO setup properly
 
-                TextConnection text = new TextConnection();
+                TextConnector text = new TextConnector();
                 Connection = text;
             }
         }
