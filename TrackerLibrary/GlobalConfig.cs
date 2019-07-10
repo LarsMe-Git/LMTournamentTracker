@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,25 +10,30 @@ namespace TrackerLibrary
 {
     public static class GlobalConfig
     {
-        public static List<IDataConnection> Connections { get; private set; } = new List<IDataConnection>(); //new way
+        public static IDataConnection Connection { get; private set; } 
 
-        public static void InitializeConnections(bool database, bool textFiles)
-        {
+        public static void InitializeConnections(DatabaseType db)
+        {         
+            //switch statement einfügen
             //old way: Connections = new List<IDataConnection>();
-            if (database == true)
+            if (db == DatabaseType.Sql)
             {
                 //TODO Set up sql connector properly
                 SqlConnector sql = new SqlConnector();
-                Connections.Add(sql);
+                Connection = sql;
             }
-            if (textFiles == true)
+            else if (db == DatabaseType.TextFile)
             {
 
                 //TODO setup properly
 
                 TextConnection text = new TextConnection();
-                Connections.Add(text);
+                Connection = text;
             }
+        }
+        public static string CnnString(string name)
+        {
+           return ConfigurationManager.ConnectionStrings[name].ConnectionString;
         }
     }
 }
