@@ -145,6 +145,7 @@
             this.createMemberButton.TabIndex = 29;
             this.createMemberButton.Text = "Create Member";
             this.createMemberButton.UseVisualStyleBackColor = true;
+            this.createMemberButton.Click += new System.EventHandler(this.CreateMemberButton_Click);
             // 
             // phoneNumberValue
             // 

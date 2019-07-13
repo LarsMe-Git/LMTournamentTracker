@@ -11,6 +11,31 @@ namespace TrackerLibrary.DataAccess
     public class TextConnector : IDataConnection
     {
         private const string PrizesFile = "PrizeModels.csv";
+        private const string PeopleFile = "PersonModels.csv";
+
+        public PersonModel CreatePerson(PersonModel model)
+        {
+            List<PersonModel> people = PeopleFile.FullFilePath().LoadFile().ConvertToPersonModels();
+
+            // find the mx id and add the new record with new ID max +1
+            int currentId = 1;
+
+            if (people.Count > 0)
+            {
+                currentId = people.OrderByDescending(x => x.Id).First().Id + 1;
+            }
+
+
+            model.Id = currentId;
+            //currentId += 1;
+            people.Add(model);
+
+            // Convert prize to list string
+            // save the liststring to text file 
+            people.SaveToPeopleFile(PeopleFile);
+
+            return model;
+        }
 
 
         // TODO wire up the createProze for text files
