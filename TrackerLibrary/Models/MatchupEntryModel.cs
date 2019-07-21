@@ -13,6 +13,11 @@ namespace TrackerLibrary.Models
         /// <summary>
         /// Represents one Team in the Matchup git läuft
         /// </summary>
+        /// 
+
+
+        public int TeamCompetingId { get; set; }
+
         public TeamModel TeamCompeting { get; set; }
         /// <summary>
         /// Represents the score for this particular team
@@ -22,6 +27,9 @@ namespace TrackerLibrary.Models
         /// represents the matchup that this team came 
         /// from as the winner
         /// </summary>
+        /// 
+
+        public int ParentMatchupId { get; set; }
         public MatchupModel ParentMatchup { get; set; }
     }
 }

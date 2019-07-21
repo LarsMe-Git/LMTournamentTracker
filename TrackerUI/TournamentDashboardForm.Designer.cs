@@ -61,7 +61,7 @@
             this.loadExistingTournamentLabel.ForeColor = System.Drawing.Color.DodgerBlue;
             this.loadExistingTournamentLabel.Location = new System.Drawing.Point(172, 145);
             this.loadExistingTournamentLabel.Name = "loadExistingTournamentLabel";
-            this.loadExistingTournamentLabel.Size = new System.Drawing.Size(269, 46);
+            this.loadExistingTournamentLabel.Size = new System.Drawing.Size(262, 45);
             this.loadExistingTournamentLabel.TabIndex = 19;
             this.loadExistingTournamentLabel.Text = "Load Tournament";
             // 
@@ -92,6 +92,7 @@
             this.createTournamentButton.TabIndex = 33;
             this.createTournamentButton.Text = "Create Tournament";
             this.createTournamentButton.UseVisualStyleBackColor = true;
+            this.createTournamentButton.Click += new System.EventHandler(this.CreateTournamentButton_Click);
             // 
             // TournamentDashboardForm
             // 
