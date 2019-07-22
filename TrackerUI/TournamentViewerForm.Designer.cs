@@ -73,7 +73,7 @@
             this.roundLabel.ForeColor = System.Drawing.Color.DodgerBlue;
             this.roundLabel.Location = new System.Drawing.Point(39, 122);
             this.roundLabel.Name = "roundLabel";
-            this.roundLabel.Size = new System.Drawing.Size(111, 46);
+            this.roundLabel.Size = new System.Drawing.Size(108, 45);
             this.roundLabel.TabIndex = 2;
             this.roundLabel.Text = "Round";
             // 
@@ -84,6 +84,7 @@
             this.roundDropDown.Name = "roundDropDown";
             this.roundDropDown.Size = new System.Drawing.Size(277, 45);
             this.roundDropDown.TabIndex = 3;
+            this.roundDropDown.SelectedIndexChanged += new System.EventHandler(this.RoundDropDown_SelectedIndexChanged);
             // 
             // unplayedOnlyCheckbox
             // 
@@ -107,6 +108,7 @@
             this.matchupListBox.Name = "matchupListBox";
             this.matchupListBox.Size = new System.Drawing.Size(424, 335);
             this.matchupListBox.TabIndex = 5;
+            this.matchupListBox.SelectedIndexChanged += new System.EventHandler(this.MatchupListBox_SelectedIndexChanged);
             // 
             // teamOneName
             // 
@@ -115,7 +117,7 @@
             this.teamOneName.ForeColor = System.Drawing.Color.DodgerBlue;
             this.teamOneName.Location = new System.Drawing.Point(511, 273);
             this.teamOneName.Name = "teamOneName";
-            this.teamOneName.Size = new System.Drawing.Size(197, 46);
+            this.teamOneName.Size = new System.Drawing.Size(190, 45);
             this.teamOneName.TabIndex = 6;
             this.teamOneName.Text = "<team one>";
             // 
@@ -126,7 +128,7 @@
             this.teamOneScoreLabel.ForeColor = System.Drawing.Color.DodgerBlue;
             this.teamOneScoreLabel.Location = new System.Drawing.Point(511, 340);
             this.teamOneScoreLabel.Name = "teamOneScoreLabel";
-            this.teamOneScoreLabel.Size = new System.Drawing.Size(96, 46);
+            this.teamOneScoreLabel.Size = new System.Drawing.Size(93, 45);
             this.teamOneScoreLabel.TabIndex = 7;
             this.teamOneScoreLabel.Text = "Score";
             // 
@@ -151,7 +153,7 @@
             this.teamTwoScoreLabel.ForeColor = System.Drawing.Color.DodgerBlue;
             this.teamTwoScoreLabel.Location = new System.Drawing.Point(512, 555);
             this.teamTwoScoreLabel.Name = "teamTwoScoreLabel";
-            this.teamTwoScoreLabel.Size = new System.Drawing.Size(96, 46);
+            this.teamTwoScoreLabel.Size = new System.Drawing.Size(93, 45);
             this.teamTwoScoreLabel.TabIndex = 10;
             this.teamTwoScoreLabel.Text = "Score";
             // 
@@ -162,7 +164,7 @@
             this.teamTwoName.ForeColor = System.Drawing.Color.DodgerBlue;
             this.teamTwoName.Location = new System.Drawing.Point(512, 488);
             this.teamTwoName.Name = "teamTwoName";
-            this.teamTwoName.Size = new System.Drawing.Size(196, 46);
+            this.teamTwoName.Size = new System.Drawing.Size(189, 45);
             this.teamTwoName.TabIndex = 9;
             this.teamTwoName.Text = "<team two>";
             // 
