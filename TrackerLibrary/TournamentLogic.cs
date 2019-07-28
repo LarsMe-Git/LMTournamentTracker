@@ -8,6 +8,7 @@ using TrackerLibrary.Models;
 
 namespace TrackerLibrary
 {
+    //Release Build complete
     public static class TournamentLogic
     {
         //TODO Wire out matchup
