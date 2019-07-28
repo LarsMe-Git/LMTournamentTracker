@@ -138,7 +138,9 @@ namespace TrackerUi
             //create all the prize entries
             GlobalConfig.Connection.CreateTournament(tm);
 
-          //  TournamentLogic.UpdateTournamentResults(tm);
+            tm.AlertUsersToNewRound();
+
+            //  TournamentLogic.UpdateTournamentResults(tm);
 
             TournamentViewerForm frm = new TournamentViewerForm(tm);
             frm.Show();
